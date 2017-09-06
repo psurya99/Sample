@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+	  
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['RB', 'P&G', 'Kraft', 'Mondelez', 'Mars', 'Kellogs', 'Alcon','Panel','GeneralMills','AnswersCore','Retail','Reynolds','SC Johnson','MillerCoors',],
+         ['',  689,      750,         522,             998,           450,      614.6, 500, 150,750,650,350,423,350,],  
+     
+	 ]);
+    var options = {
+      title : 'Total Number of Reports',
+      vAxis: {title: 'Reports'},
+      hAxis: {title: 'Clients'},
+      seriesType: 'bars',
+      //series: {5: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById(''));
+    chart.draw(data, options);
+  }
+    </script>
+  </head>
+  <body>
+    <div id="" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
